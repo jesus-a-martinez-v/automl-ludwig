@@ -26,9 +26,7 @@ First, you need to build the dataset with:
 python build_fashion_mnist.py
 ```
 
-Then, just run the following command:
-
-You can fire up an automatic search like this:
+Then, just run the following command to fire up an automatic search:
 
 ```bash
 ludwig train --data_train_csv fashion_mnist_train.csv --data_test_csv fashion_mnist_test.csv --model_definition_file model_definition.yml > output.txt```
