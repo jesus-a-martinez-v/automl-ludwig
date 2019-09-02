@@ -29,10 +29,16 @@ python build_fashion_mnist.py
 Then, just run the following command to fire up an automatic search:
 
 ```bash
-ludwig train --data_train_csv fashion_mnist_train.csv --data_test_csv fashion_mnist_test.csv --model_definition_file model_definition.yml > output.txt```
+ludwig train --data_train_csv fashion_mnist_train.csv --data_test_csv fashion_mnist_test.csv --model_definition_file model_definition.yml```
 ```
 
-Keep in mind this is a heavy and long running process. You'll see the results in `output.txt` after a few hours.
+Finally, evaluate the model:
+
+```bash
+ludwig test --data_csv fashion_mnist_test.csv --model_path results/experiment_run_[i]/model/
+```
+
+Where `i` is the number of the experiment that produced the desired model.
 
 
 ## NOTE
